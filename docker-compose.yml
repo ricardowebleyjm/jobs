@@ -6,12 +6,15 @@ services:
     image: ricardo/hireja
     restart: always
     build: .
-    # volumes:
-      # - .:/src
-      # - static_files:/src/staticfiles 
-      # - static_media:/src/submission_files 
     ports:
       - 9003:9003
-# volumes:
-  # static_files:
-  # static_media:
+
+    networks:
+      app-network:
+        aliases:
+          - main-net
+networks:
+  app-network:
+    driver: bridge
+    external: true
+ 

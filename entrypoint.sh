@@ -2,7 +2,7 @@
 
 # Running Database migrations
 python manage.py migrate --noinput
-#python manage.py collectstatic --noinput --clear
+python manage.py collectstatic --noinput --clear
 
 
 

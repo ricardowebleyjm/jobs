@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  webapp:
+    container_name: hireja
+    image: ricardo/hireja
+    restart: always
+    build: .
+    # volumes:
+      # - .:/src
+      # - static_files:/src/staticfiles 
+      # - static_media:/src/submission_files 
+    ports:
+      - 9003:9003
+# volumes:
+  # static_files:
+  # static_media:

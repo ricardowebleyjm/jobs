@@ -6,7 +6,8 @@ ENV PYTHONUNBUFFERED 1
 
 RUN apk update \
     && apk add  gcc musl-dev libmagic \
-    && apk add --no-cache mariadb-dev
+    && apk add --no-cache mariadb-dev \
+    && apk add jpeg-dev zlib-dev libjpeg 
 
 # install dependencies
 RUN pip install --upgrade pip

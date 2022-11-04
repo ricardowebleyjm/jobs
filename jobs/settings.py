@@ -147,5 +147,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
 
 ANYMAIL = {
-    "SENDINBLUE_API_KEY": "",
+    "SENDINBLUE_API_KEY": env('EMAIL_API_KEY'),
 }
+DEFAULT_FROM_EMAIL= env('DEFAULT_FROM_EMAIL')

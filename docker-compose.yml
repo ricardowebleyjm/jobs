@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  webapp:
+    container_name: hireja
+    image: ricardo/hireja
+    restart: always
+    build: .
+    ports:
+      - 9003:9003
+
+    networks:
+      app-network:
+        aliases:
+          - main-net
+networks:
+  app-network:
+    driver: bridge
+    external: true
+ 
